@@ -1,16 +1,24 @@
-import React, { useState } from 'react'
 
-export default function NumberSelector() {
+
+export default function NumberSelector({error, setError, selectedNumber, setSelectedNumber}) {
     const arrNumber = [
         1,2,3,4,5,6
     ]
-    const [selectedNumber, setSelectedNumber] = useState()
+    const numberSelectorHandler = (val) => {
+      setSelectedNumber(val);
+      setError("");
+    }
   return (
     <div className='number-selector'>
+      <p className="error">{error}</p>
         <div className='dicebox-content'>
         {
+            
             arrNumber.map((val, index)=>{
-                return <div key={index} className='dice' onClick={()=> setSelectedNumber(val)}>{val}</div>
+                return <div
+                className={`dice ${selectedNumber == val ? "selected" : ""} `}
+                key={index}
+                onClick={() => numberSelectorHandler(val)}>{val}</div>
             })
         }
        

@@ -69,10 +69,98 @@ button:hover{
   place-content: center;
   font-size: 24px;
   font-weight: 700;
+  
 }
+.selected{
+  background-color: black;
+  color: white;
+}
+
+
 
 .number-selector p{
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.number-selector{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.main-top-section{
+  padding: 70px;
+}
+
+.error{
+  color: red;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/*------roll dice-----*/
+
+.dice-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 48px;
+}
+
+.dice-container p{
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+.dices{
+  cursor: pointer;
+}
+
+/*------- Buttons-----*/
+
+.btns{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.reset-btn{
+  background: transparent;
+  border: 1px solid black;
+  color: black;
+}
+.reset-btn:hover{
+  background-color: black;
+  color: white;
+}
+
+/*------ Rules-----*/
+
+.rules-container{
+  background-color: #FBF1F1;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+
+.rules-container h2{
+  font-size: 24px;
+
+}
+
+.text{
+  margin-top: 24px;
 }
